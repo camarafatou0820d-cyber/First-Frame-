@@ -871,3 +871,272 @@ footer > span {
     padding-right: 6vw;
   }
 }
+/* ==========================================
+   FIRSTFRAME — VISUAL POLISH
+   ========================================== */
+
+::selection {
+  background: var(--obsidian);
+  color: var(--ivory);
+}
+
+/* Smooth image/visual behavior */
+
+.project-image,
+.hero-visual,
+.hero-link,
+.cta-button,
+.service-row {
+  will-change: transform;
+}
+
+/* More sophisticated hero depth */
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  right: -20vw;
+  bottom: -30vw;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(99, 80, 255, 0.10),
+    transparent 65%
+  );
+
+  pointer-events: none;
+}
+
+/* Give the hero visual more dimension */
+
+.hero-visual {
+  box-shadow:
+    0 35px 100px rgba(17, 16, 15, 0.16),
+    inset 0 0 80px rgba(255, 255, 255, 0.10);
+}
+
+/* Hero text hierarchy */
+
+.hero h1 {
+  text-wrap: balance;
+}
+
+.hero h1 em {
+  display: inline-block;
+}
+
+/* Make supporting text feel intentional */
+
+.hero-bottom p {
+  letter-spacing: -0.015em;
+}
+
+/* Statement emphasis */
+
+.statement h2 span {
+  display: inline;
+  transition: color 0.4s ease;
+}
+
+.statement:hover h2 span {
+  color: var(--obsidian);
+}
+
+/* Work interaction */
+
+.project {
+  overflow: visible;
+}
+
+.project-image {
+  transform-origin: center;
+}
+
+.project-image::after {
+  content: "VIEW PROJECT ↗";
+
+  position: absolute;
+
+  right: 22px;
+  top: 22px;
+
+  padding: 9px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 100px;
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project:hover .project-image::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Service numbers */
+
+.service-row strong {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.service-row:hover strong {
+  transform: translate(5px, -5px);
+}
+
+/* Approach cards */
+
+.approach-grid article {
+  transition:
+    background 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.approach-grid article:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+/* Studio section */
+
+.studio-content h2 em {
+  position: relative;
+}
+
+.studio-content h2 em::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -5px;
+
+  height: 2px;
+
+  background: var(--violet);
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.5s ease;
+}
+
+.studio-preview:hover .studio-content h2 em::after {
+  transform: scaleX(1);
+}
+
+/* CTA button */
+
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: white;
+
+  transform: translateY(100%);
+
+  transition: transform 0.35s ease;
+
+  z-index: 0;
+}
+
+.cta-button span,
+.cta-button {
+  position: relative;
+}
+
+.cta-button:hover::before {
+  transform: translateY(0);
+}
+
+.cta-button:hover {
+  color: var(--violet);
+}
+
+.cta-button > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer refinement */
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Accessibility */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 5px;
+}
+
+/* Reduce motion for users who request it */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile refinement */
+
+@media (max-width: 800px) {
+
+  .hero::after {
+    width: 100vw;
+    height: 100vw;
+    right: -50vw;
+    bottom: -30vw;
+  }
+
+  .hero-visual {
+    box-shadow:
+      0 25px 70px rgba(17, 16, 15, 0.13);
+  }
+
+  .project-image::after {
+    opacity: 1;
+    transform: none;
+  }
+
+  .approach-grid article:hover {
+    background: transparent;
+  }
+
+}
