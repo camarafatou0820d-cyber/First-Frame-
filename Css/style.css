@@ -3442,3 +3442,99 @@ button:focus-visible {
     font-size: clamp(3.5rem, 14vw, 6.5rem);
   }
 }
+/* =========================================
+   FIRSTFRAME — GLOBAL NAV REFINEMENT
+========================================= */
+
+.site-header {
+  z-index: 1000;
+}
+
+.logo {
+  position: relative;
+  z-index: 1001;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.navigation {
+  align-items: center;
+}
+
+.navigation a {
+  position: relative;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.navigation a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.45rem;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.navigation a:not(.nav-cta):hover::after,
+.navigation a.active:not(.nav-cta)::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navigation a.active {
+  opacity: 1;
+}
+
+.nav-cta {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: var(--violet);
+  border-color: var(--violet);
+  color: var(--ivory);
+}
+
+.nav-cta span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.nav-cta:hover span {
+  transform: translate(4px,-4px);
+}
+
+
+/* MOBILE NAV */
+
+@media (max-width: 800px) {
+
+  .navigation {
+    z-index: 1000;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation a {
+    width: fit-content;
+  }
+
+  .navigation a:not(.nav-cta)::after {
+    display: none;
+  }
+
+  .nav-cta {
+    margin-top: 1rem;
+  }
+}
