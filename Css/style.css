@@ -3634,3 +3634,118 @@ button:focus-visible {
   }
 
 }
+/* =========================================
+   FIRSTFRAME — PORTFOLIO POLISH
+========================================= */
+
+.projects {
+  position: relative;
+}
+
+.project {
+  position: relative;
+}
+
+.project-image {
+  position: relative;
+  background: var(--stone);
+}
+
+.project-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(243,239,231,0.12);
+  pointer-events: none;
+}
+
+.project-number {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+
+  border: 1px solid rgba(243,239,231,0.5);
+  border-radius: 50%;
+
+  background: rgba(17,16,15,0.72);
+  color: var(--ivory);
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  backdrop-filter: blur(8px);
+}
+
+.project-info {
+  position: relative;
+}
+
+.project-category {
+  letter-spacing: 0.13em;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  white-space: nowrap;
+}
+
+.project-link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover span {
+  transform: translate(4px,-4px);
+}
+
+
+/* PROJECT HOVER */
+
+.project-image img {
+  will-change: transform;
+}
+
+.project:hover .project-number {
+  background: var(--violet);
+  border-color: var(--violet);
+}
+
+
+/* WORK PAGE IMAGE */
+
+.case-image {
+  position: relative;
+}
+
+.case-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(17,16,15,0.12);
+  pointer-events: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .project-number {
+    top: 1rem;
+    left: 1rem;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+}
