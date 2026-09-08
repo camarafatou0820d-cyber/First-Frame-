@@ -3097,3 +3097,348 @@ button:focus-visible {
 .journal-articles-heading h2 span {
   color: var(--violet);
 }
+/* =========================================
+   FIRSTFRAME — START A PROJECT PAGE
+========================================= */
+
+.start-page-hero {
+  min-height: 88vh;
+  padding: 10rem 6vw 7rem;
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.start-page-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.start-page-label span:first-child {
+  color: var(--acid);
+}
+
+.start-page-content h1 {
+  margin: 0;
+  font-size: clamp(4rem, 9.5vw, 9.5rem);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.start-page-content h1 span {
+  color: var(--violet);
+}
+
+.start-page-content > p {
+  max-width: 600px;
+  margin: 3rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(243,239,231,0.68);
+}
+
+
+/* FORM SECTION */
+
+.project-form-section {
+  padding: 11rem 6vw;
+  display: grid;
+  grid-template-columns: 0.7fr 1.5fr;
+  gap: 5rem;
+  background: var(--ivory);
+  color: var(--ink);
+}
+
+.project-form-intro .eyebrow {
+  margin: 0;
+  color: var(--violet);
+}
+
+.project-form-intro h2 {
+  margin: 2rem 0 0;
+  font-size: clamp(4rem, 7vw, 7rem);
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.project-form-intro h2 span {
+  color: var(--violet);
+}
+
+.project-form {
+  max-width: 900px;
+}
+
+.project-form label {
+  display: block;
+  margin-bottom: 2.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project-form input,
+.project-form select,
+.project-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.8rem;
+  padding: 1.1rem 0;
+  border: none;
+  border-bottom: 1px solid rgba(17,16,15,0.35);
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  resize: vertical;
+  transition: border-color 0.25s ease;
+}
+
+.project-form input::placeholder,
+.project-form textarea::placeholder {
+  color: rgba(17,16,15,0.38);
+}
+
+.project-form input:focus,
+.project-form select:focus,
+.project-form textarea:focus {
+  border-bottom-color: var(--violet);
+}
+
+.project-form select {
+  cursor: pointer;
+}
+
+.project-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--ivory);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-submit span {
+  color: var(--acid);
+  transition: transform 0.3s ease;
+}
+
+.project-submit:hover {
+  background: var(--violet);
+  border-color: var(--violet);
+}
+
+.project-submit:hover span {
+  transform: translate(4px,-4px);
+}
+
+
+/* EXPECTATIONS */
+
+.start-expectations {
+  padding: 11rem 6vw;
+  background: var(--stone);
+  color: var(--ink);
+}
+
+.start-expectations-heading {
+  display: grid;
+  grid-template-columns: 0.7fr 1.5fr;
+  gap: 5rem;
+  margin-bottom: 6rem;
+}
+
+.start-expectations-heading .eyebrow {
+  margin: 0;
+}
+
+.start-expectations-heading h2 {
+  margin: 0;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.start-expectations-heading h2 span {
+  color: var(--violet);
+}
+
+.expectation-list {
+  border-top: 1px solid rgba(17,16,15,0.25);
+}
+
+.expectation-item {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+  gap: 4rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(17,16,15,0.25);
+}
+
+.expectation-item > span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--violet);
+}
+
+.expectation-item h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.expectation-item p {
+  max-width: 600px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* FINAL */
+
+.start-final {
+  min-height: 75vh;
+  padding: 10rem 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--violet);
+  color: var(--ivory);
+}
+
+.start-final > p {
+  margin: 0 0 2rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.start-final h2 {
+  max-width: 1100px;
+  margin: 0;
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.start-final h2 span {
+  color: var(--acid);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .start-page-hero {
+    min-height: 75vh;
+    padding: 8rem 5vw 5rem;
+    display: block;
+  }
+
+  .start-page-label {
+    margin-bottom: 4rem;
+  }
+
+  .start-page-content h1 {
+    font-size: clamp(3.3rem, 14vw, 6.2rem);
+  }
+
+  .start-page-content > p {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .project-form-section {
+    padding: 8rem 5vw;
+    display: block;
+  }
+
+  .project-form-intro {
+    margin-bottom: 5rem;
+  }
+
+  .project-form-intro h2 {
+    font-size: clamp(3.2rem, 13vw, 5.5rem);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .project-form label {
+    margin-bottom: 2rem;
+  }
+
+  .project-form input,
+  .project-form select,
+  .project-form textarea {
+    font-size: 1rem;
+  }
+
+  .start-expectations {
+    padding: 8rem 5vw;
+  }
+
+  .start-expectations-heading {
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  .start-expectations-heading h2 {
+    margin-top: 2rem;
+    font-size: clamp(3.2rem, 13vw, 5.5rem);
+  }
+
+  .expectation-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2.5rem 0;
+  }
+
+  .expectation-item h3 {
+    font-size: 2.5rem;
+  }
+
+  .start-final {
+    min-height: 65vh;
+    padding: 7rem 5vw;
+  }
+
+  .start-final h2 {
+    font-size: clamp(3.5rem, 14vw, 6.5rem);
+  }
+}
