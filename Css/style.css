@@ -1140,3 +1140,216 @@ button:focus-visible {
   }
 
 }
+/* =========================================
+   FIRSTFRAME — PORTFOLIO POLISH
+========================================= */
+
+.work {
+  position: relative;
+  padding: 10rem 6vw;
+  background: var(--ivory);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.section-intro {
+  max-width: 900px;
+  margin-bottom: 7rem;
+}
+
+.section-intro .eyebrow {
+  margin-bottom: 1.5rem;
+}
+
+.section-intro h2 {
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.section-intro h2 span {
+  color: var(--violet);
+}
+
+.section-description {
+  max-width: 560px;
+  margin-top: 2.5rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+
+/* PROJECT LAYOUT */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.project {
+  position: relative;
+}
+
+.project-large {
+  width: 88%;
+}
+
+.project-offset {
+  width: 72%;
+  margin-left: auto;
+}
+
+
+/* IMAGE */
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  background: var(--stone);
+  aspect-ratio: 16 / 10;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+
+.project:hover .project-image img {
+  transform: scale(1.035);
+}
+
+
+/* PROJECT NUMBER */
+
+.project-number {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+
+  width: 3rem;
+  height: 3rem;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--ink);
+  color: var(--ivory);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+
+/* PROJECT INFORMATION */
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+
+  padding: 1.8rem 0 0;
+  border-bottom: 1px solid rgba(17, 16, 15, 0.2);
+  padding-bottom: 1.8rem;
+}
+
+.project-category {
+  margin: 0 0 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: -0.035em;
+}
+
+
+/* VIEW PROJECT */
+
+.project-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  color: var(--ink);
+  text-decoration: none;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  white-space: nowrap;
+}
+
+.project-link span {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover span {
+  transform: translate(4px, -4px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .work {
+    padding: 7rem 5vw;
+  }
+
+  .section-intro {
+    margin-bottom: 4rem;
+  }
+
+  .section-intro h2 {
+    font-size: clamp(3.4rem, 15vw, 6rem);
+  }
+
+  .section-description {
+    font-size: 1rem;
+    margin-top: 1.8rem;
+  }
+
+  .projects {
+    gap: 6rem;
+  }
+
+  .project-large,
+  .project-offset {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .project-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-info {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-info h3 {
+    font-size: 2rem;
+  }
+
+  .project-link {
+    padding-bottom: 0.3rem;
+  }
+}
