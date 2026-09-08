@@ -3538,3 +3538,99 @@ button:focus-visible {
     margin-top: 1rem;
   }
 }
+/* =========================================
+   FIRSTFRAME — MOTION SYSTEM
+========================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(.2,.7,.2,1),
+    transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* HERO CONTENT */
+
+.work-hero-content,
+.services-page-content,
+.studio-page-content,
+.journal-page-content,
+.start-page-content {
+  animation: firstframeHero 1s cubic-bezier(.2,.7,.2,1) both;
+}
+
+@keyframes firstframeHero {
+
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* BUTTON MOTION */
+
+.button,
+.project-submit {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.button:hover,
+.project-submit:hover {
+  transform: translateY(-2px);
+}
+
+
+/* IMAGE MOTION */
+
+.project-image,
+.case-image {
+  overflow: hidden;
+}
+
+.project-image img,
+.case-image img {
+  transition:
+    transform 0.8s cubic-bezier(.2,.7,.2,1);
+}
+
+.project-image:hover img,
+.case-image:hover img {
+  transform: scale(1.035);
+}
+
+
+/* RESPECT REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
