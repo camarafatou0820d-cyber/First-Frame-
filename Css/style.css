@@ -2613,3 +2613,326 @@ button:focus-visible {
     font-size: clamp(3.5rem, 14vw, 6.5rem);
   }
 }
+/* =========================================
+   FIRSTFRAME — STUDIO PAGE
+========================================= */
+
+.studio-page-hero {
+  min-height: 88vh;
+  padding: 10rem 6vw 7rem;
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  background: var(--stone);
+  color: var(--ink);
+}
+
+.studio-page-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.studio-page-label span:first-child {
+  color: var(--violet);
+}
+
+.studio-page-content h1 {
+  margin: 0;
+  font-size: clamp(4.5rem, 10vw, 10rem);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.studio-page-content h1 span {
+  color: var(--violet);
+}
+
+.studio-page-content > p {
+  max-width: 600px;
+  margin: 3rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(17,16,15,0.65);
+}
+
+
+/* PHILOSOPHY */
+
+.studio-philosophy {
+  padding: 12rem 6vw;
+  display: grid;
+  grid-template-columns: 0.7fr 1.5fr;
+  gap: 5rem;
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.studio-philosophy-label .eyebrow {
+  margin: 0;
+  color: var(--cyan);
+}
+
+.studio-philosophy-content {
+  max-width: 1000px;
+}
+
+.studio-philosophy-content h2 {
+  margin: 0 0 4rem;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.86;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.studio-philosophy-content p {
+  max-width: 650px;
+  margin: 0 0 2rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: rgba(243,239,231,0.68);
+}
+
+
+/* VALUES */
+
+.studio-values {
+  padding: 11rem 6vw;
+  background: var(--ivory);
+  color: var(--ink);
+}
+
+.studio-values-heading {
+  display: grid;
+  grid-template-columns: 0.7fr 1.5fr;
+  gap: 5rem;
+  margin-bottom: 6rem;
+}
+
+.studio-values-heading .eyebrow {
+  margin: 0;
+}
+
+.studio-values-heading h2 {
+  margin: 0;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+}
+
+.studio-values-heading h2 span {
+  color: var(--violet);
+}
+
+.studio-values-list {
+  border-top: 1px solid rgba(17,16,15,0.25);
+}
+
+.studio-value {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+  gap: 4rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(17,16,15,0.25);
+}
+
+.studio-value > span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--violet);
+}
+
+.studio-value h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.studio-value p {
+  max-width: 600px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* VISION */
+
+.studio-vision {
+  min-height: 80vh;
+  padding: 10rem 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--violet);
+  color: var(--ivory);
+}
+
+.studio-vision .eyebrow {
+  margin: 0 0 2rem;
+}
+
+.studio-vision h2 {
+  max-width: 1100px;
+  margin: 0;
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.studio-vision h2 span {
+  color: var(--acid);
+}
+
+.studio-vision-text {
+  max-width: 620px;
+  margin: 3rem 0 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(243,239,231,0.8);
+}
+
+
+/* CTA */
+
+.studio-page-cta {
+  min-height: 65vh;
+  padding: 9rem 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.studio-page-cta > p {
+  margin: 0 0 2rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--cyan);
+}
+
+.studio-page-cta h2 {
+  max-width: 1100px;
+  margin: 0;
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.studio-page-cta h2 span {
+  color: var(--violet);
+}
+
+.studio-page-cta .button {
+  width: fit-content;
+  margin-top: 3rem;
+  background: var(--ivory);
+  color: var(--ink);
+  border-color: var(--ivory);
+}
+
+.studio-page-cta .button:hover {
+  background: var(--acid);
+  border-color: var(--acid);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .studio-page-hero {
+    min-height: 75vh;
+    padding: 8rem 5vw 5rem;
+    display: block;
+  }
+
+  .studio-page-label {
+    margin-bottom: 4rem;
+  }
+
+  .studio-page-content h1 {
+    font-size: clamp(3.5rem, 15vw, 6.5rem);
+  }
+
+  .studio-page-content > p {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .studio-philosophy {
+    padding: 8rem 5vw;
+    display: block;
+  }
+
+  .studio-philosophy-label {
+    margin-bottom: 3rem;
+  }
+
+  .studio-philosophy-content h2 {
+    font-size: clamp(3.2rem, 13vw, 5.5rem);
+    margin-bottom: 2.5rem;
+  }
+
+  .studio-philosophy-content p {
+    font-size: 1rem;
+  }
+
+  .studio-values {
+    padding: 8rem 5vw;
+  }
+
+  .studio-values-heading {
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  .studio-values-heading h2 {
+    margin-top: 2rem;
+    font-size: clamp(3.2rem, 13vw, 5.5rem);
+  }
+
+  .studio-value {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2.5rem 0;
+  }
+
+  .studio-value h3 {
+    font-size: 2.5rem;
+  }
+
+  .studio-vision {
+    min-height: 65vh;
+    padding: 7rem 5vw;
+  }
+
+  .studio-vision h2 {
+    font-size: clamp(3.5rem, 14vw, 6.5rem);
+  }
+
+  .studio-vision-text {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .studio-page-cta {
+    min-height: 60vh;
+    padding: 7rem 5vw;
+  }
+
+  .studio-page-cta h2 {
+    font-size: clamp(3.5rem, 14vw, 6.5rem);
+  }
+}
