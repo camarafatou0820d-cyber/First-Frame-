@@ -1486,3 +1486,59 @@ button:focus-visible {
     display: none;
   }
 }
+/* =========================================
+   FIRSTFRAME — STATEMENT SECTION
+========================================= */
+
+.statement {
+  position: relative;
+  padding: 12rem 6vw;
+  background: var(--ink);
+  color: var(--ivory);
+  overflow: hidden;
+}
+
+.statement::after {
+  content: "FIRSTFRAME";
+  position: absolute;
+  right: -2vw;
+  bottom: -4vw;
+
+  font-size: clamp(6rem, 16vw, 18rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+
+  color: rgba(243, 239, 231, 0.035);
+  pointer-events: none;
+}
+
+.statement p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1050px;
+  margin: 0;
+
+  font-size: clamp(2.8rem, 6vw, 6.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.statement p::first-letter {
+  color: var(--violet);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .statement {
+    padding: 8rem 5vw;
+  }
+
+  .statement p {
+    font-size: clamp(2.4rem, 10vw, 4.5rem);
+  }
+}
