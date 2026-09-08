@@ -1662,3 +1662,136 @@ button:focus-visible {
     font-size: 0.95rem;
   }
 }
+/* =========================================
+   FIRSTFRAME — SERVICES
+========================================= */
+
+.services {
+  position: relative;
+  padding: 11rem 6vw;
+  background: var(--obsidian);
+  color: var(--ivory);
+  overflow: hidden;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+.services-header h2 {
+  max-width: 850px;
+  margin: 0;
+
+  font-size: clamp(3.8rem, 8vw, 8rem);
+  line-height: 0.86;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.services-header h2 span {
+  color: var(--cyan);
+}
+
+.services-intro {
+  max-width: 330px;
+  margin: 0;
+
+  color: rgba(243, 239, 231, 0.65);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
+/* SERVICE LIST */
+
+.services-list {
+  border-top: 1px solid rgba(243, 239, 231, 0.22);
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr auto;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 2.7rem 0;
+
+  border-bottom: 1px solid rgba(243, 239, 231, 0.22);
+
+  transition: padding 0.35s ease;
+}
+
+.service-item:hover {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.service-number {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(243, 239, 231, 0.55);
+}
+
+.service-item h3 {
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.service-arrow {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-arrow {
+  transform: translate(5px, -5px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .services {
+    padding: 8rem 5vw;
+  }
+
+  .services-header {
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  .services-header h2 {
+    font-size: clamp(3.2rem, 13vw, 5.5rem);
+  }
+
+  .services-intro {
+    margin-top: 2rem;
+  }
+
+  .service-item {
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .service-item:hover {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .service-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .service-arrow {
+    font-size: 1.4rem;
+  }
+}
