@@ -1795,3 +1795,127 @@ button:focus-visible {
     font-size: 1.4rem;
   }
 }
+/* =========================================
+   FIRSTFRAME — STUDIO
+========================================= */
+
+.studio {
+  position: relative;
+  padding: 12rem 6vw;
+  background: var(--stone);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.studio-layout {
+  display: grid;
+  grid-template-columns: 0.7fr 1.5fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.studio-label {
+  position: sticky;
+  top: 8rem;
+}
+
+.studio-label .eyebrow {
+  margin: 0;
+}
+
+.studio-content {
+  max-width: 1000px;
+}
+
+.studio-content h2 {
+  margin: 0;
+
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.88;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.studio-content h2 span {
+  color: var(--violet);
+}
+
+.studio-content > p {
+  max-width: 650px;
+  margin: 3rem 0 0;
+
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+  line-height: 1.7;
+  color: rgba(17, 16, 15, 0.68);
+}
+
+
+/* STUDIO PRINCIPLES */
+
+.studio-principles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+
+  margin-top: 6rem;
+
+  background: rgba(17, 16, 15, 0.2);
+}
+
+.studio-principle {
+  padding: 2.5rem;
+  background: var(--stone);
+}
+
+.studio-principle strong {
+  display: block;
+  margin-bottom: 1rem;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.studio-principle p {
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(17, 16, 15, 0.65);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .studio {
+    padding: 8rem 5vw;
+  }
+
+  .studio-layout {
+    display: block;
+  }
+
+  .studio-label {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .studio-content h2 {
+    font-size: clamp(3.5rem, 14vw, 6rem);
+  }
+
+  .studio-content > p {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .studio-principles {
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+
+  .studio-principle {
+    padding: 2rem;
+  }
+}
