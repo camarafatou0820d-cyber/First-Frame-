@@ -1919,3 +1919,95 @@ button:focus-visible {
     padding: 2rem;
   }
 }
+/* =========================================
+   FIRSTFRAME — FINAL CTA
+========================================= */
+
+.final-cta {
+  position: relative;
+  min-height: 75vh;
+  padding: 9rem 6vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: var(--violet);
+  color: var(--ivory);
+
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: "01";
+  position: absolute;
+  right: 5vw;
+  top: 3rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  opacity: 0.65;
+}
+
+.final-cta h2 {
+  max-width: 1100px;
+  margin: 0;
+
+  font-size: clamp(4rem, 10vw, 10rem);
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.final-cta h2 span {
+  display: block;
+  color: var(--acid);
+}
+
+.final-cta p {
+  max-width: 520px;
+  margin: 2.5rem 0 0;
+
+  font-size: 1.1rem;
+  line-height: 1.65;
+
+  color: rgba(243, 239, 231, 0.82);
+}
+
+.final-cta .button {
+  width: fit-content;
+  margin-top: 2.5rem;
+
+  background: var(--ink);
+  color: var(--ivory);
+
+  border-color: var(--ink);
+}
+
+.final-cta .button:hover {
+  background: var(--ivory);
+  color: var(--ink);
+  border-color: var(--ivory);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .final-cta {
+    min-height: 65vh;
+    padding: 7rem 5vw;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(3.5rem, 15vw, 6.5rem);
+  }
+
+  .final-cta p {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+}
