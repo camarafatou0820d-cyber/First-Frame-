@@ -1542,3 +1542,123 @@ button:focus-visible {
     font-size: clamp(2.4rem, 10vw, 4.5rem);
   }
 }
+/* =========================================
+   FIRSTFRAME — APPROACH
+========================================= */
+
+.approach {
+  position: relative;
+  padding: 11rem 6vw;
+  background: var(--ivory);
+  overflow: hidden;
+}
+
+.approach-header {
+  display: grid;
+  grid-template-columns: 0.8fr 1.6fr;
+  gap: 5rem;
+  align-items: end;
+  margin-bottom: 7rem;
+}
+
+.approach-header .eyebrow {
+  margin: 0;
+}
+
+.approach-header h2 {
+  max-width: 900px;
+  margin: 0;
+
+  font-size: clamp(3.5rem, 7vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+}
+
+.approach-header h2 span {
+  color: var(--violet);
+}
+
+
+/* APPROACH ITEMS */
+
+.approach-grid {
+  border-top: 1px solid rgba(17, 16, 15, 0.2);
+}
+
+.approach-card {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 1fr;
+  gap: 3rem;
+
+  padding: 3rem 0;
+
+  border-bottom: 1px solid rgba(17, 16, 15, 0.2);
+
+  transition:
+    padding 0.35s ease,
+    background 0.35s ease;
+}
+
+.approach-card:hover {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.approach-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.approach-card h3 {
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.approach-card p {
+  max-width: 500px;
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .approach {
+    padding: 8rem 5vw;
+  }
+
+  .approach-header {
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  .approach-header h2 {
+    margin-top: 2rem;
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .approach-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2.5rem 0;
+  }
+
+  .approach-card:hover {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .approach-card p {
+    font-size: 0.95rem;
+  }
+}
